@@ -82,8 +82,6 @@ var markup = div(
 //</div>
 ```
 
-
-
 ## Why?
 
 `spraycan` arose out of a desire to generate static markup for my blog. I only wanted to use React's `renderToStaticMarkup` function, but doing so required several libraries, and I could never actually get `gulp` to understand JSX. Thus, `spraycan` was born - no dependencies and trivial to use.
@@ -91,3 +89,7 @@ var markup = div(
 ## Name
 
 spraycans are used in graffiti -> tagging -> HTML tags -> *groan*.
+
+## License
+
+[ISC](https://en.wikipedia.org/wiki/ISC_license)
