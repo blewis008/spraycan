@@ -1,0 +1,22 @@
+{
+  "name": "spraycan",
+  "version": "0.2.0",
+  "description": "Simple and lightweight library for generating markup.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blewisio/spraycan.git"
+  },
+  "keywords": [
+    "markup"
+  ],
+  "author": "Brent Lewis <brent.lewis08@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blewisio/spraycan/issues"
+  },
+  "homepage": "https://github.com/blewisio/spraycan#readme"
+}

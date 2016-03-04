@@ -7,6 +7,14 @@ function tag (name) {
             return openTag + closeTag;
         } else {
             if (Array.isArray(args[0])) {
+                for (var i = 0; i < args[0].length; i++) {
+                    var attribute = args[0][i];
+                    if (attribute.indexOf('=') === -1 && attribute.indexOf('#') === 0) {
+                        args[0][i] = 'id="' + attribute.substr(1, attribute.length) + '"';
+                    } else if (attribute.indexOf('=') === -1 && attribute.indexOf('.') === 0) {
+                        args[0][i] = 'class="' + attribute.substr(1, attribute.length) + '"';
+                    }
+                }
                 openTag = '<' + name + ' ' + args[0].join(' ') + '>';
                 args.shift();
             }
