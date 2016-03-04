@@ -64,6 +64,31 @@ var markup = body(
 //</body>
 ```
 
+...and you can use ID and class shorthand syntax:
+
+```javascript
+var spraycan = require('spraycan');
+var body = spraycan.body;
+var div = spraycan.div;
+var h1 = spraycan.h1;
+
+var markup = body(
+    div(['.header'],
+        h1(['.header-title'], 'My Title')
+    ),
+    div('content'),
+    div(['#footer', '.footer'], 'footer')
+);
+
+//<body>
+//  <div class="header">
+//    <h1 class="header-title">My Title</h1>
+//  </div>
+//  <div>content</div>
+//  <div id="footer" class="footer">footer</div>
+//</body>
+```
+
 You can generate custom tags by using the `tag` function:
 
 ```javascript
