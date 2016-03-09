@@ -1,6 +1,6 @@
 {
   "name": "spraycan",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple and lightweight library for generating markup.",
   "main": "index.js",
   "scripts": {

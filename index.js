@@ -38,8 +38,8 @@ var h6 = tag('h6');
 var div = tag('div');
 var span = tag('span');
 var p = tag('p');
-var li = tag('ul');
-var ul = tag('li');
+var ul = tag('ul');
+var li = tag('li');
 var a = tag('a');
 var link = function (href) {
     return '<link rel="stylesheet" type="text/css" href="' + href + '">';
