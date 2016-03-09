@@ -40,17 +40,26 @@ var span = tag('span');
 var p = tag('p');
 var li = tag('ul');
 var ul = tag('li');
+var a = tag('a');
 var link = function (href) {
     return '<link rel="stylesheet" type="text/css" href="' + href + '">';
 };
 var rule = function (selector, props) {
     return selector + ' {\n' + props.join('\n') + '\n}';
 };
+var meta = function (args) {
+    if (Array.isArray(args)) {
+        return '<meta ' + args.join(' ') + '>';
+    } else {
+        return '<meta ' + args + '>';
+    }
+};
 
 module.exports = {
     tag: tag,
     html: html,
     head: head,
+    meta: meta,
     title: title,
     style: style,
     body: body,
@@ -64,5 +73,6 @@ module.exports = {
     span: span,
     p: p,
     li: li,
-    ul: ul
+    ul: ul,
+    a: a
 };

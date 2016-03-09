@@ -8,9 +8,7 @@
 var spraycan = require('spraycan');
 var div = spraycan.div;
 
-var markup = div('philly cheesesteak');
-
-//<div>philly cheesesteak</div>
+var markup = div('philly cheesesteak');         // <div>philly cheesesteak</div>
 ```
 
 Nesting elements works as expected. Comma-separated elements will be siblings:
@@ -20,23 +18,14 @@ var spraycan = require('spraycan');
 var ul = spraycan.ul;
 var li = spraycan.li;
 
-var markup = ul(
-    li('slice of rye bread'),
-    li('provolone cheese'),
-    li('basil pesto'),
-    li('romaine lettuce'),
-    li('turkey'),
-    li('slice of rye bread')
-);
-
-//<ul>
-//  <li>slice of rye bread</li>
-//  <li>provolone cheese</li>
-//  <li>basil pesto</li>
-//  <li>romaine lettuce</li>
-//  <li>turkey</li>
-//  <li>slice of rye bread</li>
-//</ul>
+var markup = ul(                                // <ul>
+    li('slice of rye bread'),                   //   <li>slice of rye bread</li>
+    li('provolone cheese'),                     //   <li>provolone cheese</li>
+    li('basil pesto'),                          //   <li>basil pesto</li>
+    li('romaine lettuce'),                      //   <li>romaine lettuce</li>
+    li('turkey'),                               //   <li>turkey</li>
+    li('slice of rye bread')                    //   <li>slice of rye bread</li>
+);                                              // </ul>
 ```
 
 If the first parameter is an array, the elements in the array become attributes:
@@ -47,24 +36,16 @@ var body = spraycan.body;
 var div = spraycan.div;
 var h1 = spraycan.h1;
 
-var markup = body(
-    div(['class="header"'],
-        h1(['style="border-bottom: 1px solid #000;"'], 'My Title')
-    ),
-    div('content'),
-    div(['id="footer"', 'class="footer"'], 'footer')
-);
-
-//<body>
-//  <div class="header">
-//    <h1 style="border-bottom: 1px solid #000;">My Title</h1>
-//  </div>
-//  <div>content</div>
-//  <div id="footer" class="footer">footer</div>
-//</body>
+var markup = body(                              // <body>
+    div(['class="header"'],                     //   <div class="header">
+        h1(['style="color: #00e;"'], 'Title')   //     <h1 style="color: #00e;">Title</h1>
+    ),                                          //   </div>
+    div('content'),                             //   <div>content</div>
+    div(['id="footer"'], 'footer')              //   <div id="footer">footer</div>
+);                                              // </body>
 ```
 
-...and you can use ID and class shorthand syntax:
+...and you can use a shorthand syntax for ID and class:
 
 ```javascript
 var spraycan = require('spraycan');
@@ -72,21 +53,13 @@ var body = spraycan.body;
 var div = spraycan.div;
 var h1 = spraycan.h1;
 
-var markup = body(
-    div(['.header'],
-        h1(['.header-title'], 'My Title')
-    ),
-    div('content'),
-    div(['#footer', '.footer'], 'footer')
-);
-
-//<body>
-//  <div class="header">
-//    <h1 class="header-title">My Title</h1>
-//  </div>
-//  <div>content</div>
-//  <div id="footer" class="footer">footer</div>
-//</body>
+var markup = body(                              //<body>
+    div(['.header'],                            //  <div class="header">
+        h1(['.header-title'], 'My Title')       //    <h1 class="header-title">My Title</h1>
+    ),                                          //  </div>
+    div('content'),                             //  <div>content</div>
+    div(['#footer', '.footer'], 'footer')       //  <div id="footer" class="footer">footer</div>
+);                                              //</body>
 ```
 
 You can generate custom tags by using the `tag` function:
@@ -98,13 +71,9 @@ var div = spraycan.div;
 var tag = spraycan.tag;
 var myCustomTag = tag('my-custom-tag');
 
-var markup = div(
-    myCustomTag('some text')
-);
-
-//<div>
-//  <my-custom-tag>some text</my-custom-tag>
-//</div>
+var markup = div(                               // <div>
+    myCustomTag('some text')                    //   <my-custom-tag>some text</my-custom-tag>
+);                                              // </div>
 ```
 
 ## Why?
