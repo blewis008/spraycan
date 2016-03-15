@@ -19,7 +19,7 @@ function tag (name) {
                 args.shift();
             }
 
-            return openTag + '\n' + args.join('\n') + '\n' + closeTag;
+            return openTag + args.join('') + closeTag;
         }
     };
 }
@@ -45,7 +45,7 @@ var link = function (href) {
     return '<link rel="stylesheet" type="text/css" href="' + href + '">';
 };
 var rule = function (selector, props) {
-    return selector + ' {\n' + props.join('\n') + '\n}';
+    return selector + ' {' + props.join(';') + '}';
 };
 var meta = function (args) {
     if (Array.isArray(args)) {
