@@ -41,19 +41,25 @@ var p = tag('p');
 var ul = tag('ul');
 var li = tag('li');
 var a = tag('a');
-var link = function (href) {
+var svg = tag('svg');
+var path = tag('path');
+var img = tag('img');
+
+function link (href) {
     return '<link rel="stylesheet" type="text/css" href="' + href + '">';
-};
-var rule = function (selector, props) {
+}
+
+function rule (selector, props) {
     return selector + ' {' + props.join(';') + '}';
-};
-var meta = function (args) {
+}
+
+function meta (args) {
     if (Array.isArray(args)) {
         return '<meta ' + args.join(' ') + '>';
     } else {
         return '<meta ' + args + '>';
     }
-};
+}
 
 module.exports = {
     tag: tag,
@@ -61,7 +67,9 @@ module.exports = {
     head: head,
     meta: meta,
     title: title,
+    link: link,
     style: style,
+    rule: rule,
     body: body,
     h1: h1,
     h2: h2,
@@ -74,5 +82,8 @@ module.exports = {
     p: p,
     li: li,
     ul: ul,
-    a: a
+    a: a,
+    svg: svg,
+    path: path,
+    img: img
 };
