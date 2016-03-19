@@ -24,27 +24,6 @@ function tag (name) {
     };
 }
 
-var html = tag('html');
-var head = tag('head');
-var title = tag('title');
-var style = tag('style');
-var body = tag('body');
-var h1 = tag('h1');
-var h2 = tag('h2');
-var h3 = tag('h3');
-var h4 = tag('h4');
-var h5 = tag('h5');
-var h6 = tag('h6');
-var div = tag('div');
-var span = tag('span');
-var p = tag('p');
-var ul = tag('ul');
-var li = tag('li');
-var a = tag('a');
-var svg = tag('svg');
-var path = tag('path');
-var img = tag('img');
-
 function link (href) {
     return '<link rel="stylesheet" type="text/css" href="' + href + '">';
 }
@@ -63,27 +42,27 @@ function meta (args) {
 
 module.exports = {
     tag: tag,
-    html: html,
-    head: head,
     meta: meta,
-    title: title,
-    link: link,
-    style: style,
     rule: rule,
-    body: body,
-    h1: h1,
-    h2: h2,
-    h3: h3,
-    h4: h4,
-    h5: h5,
-    h6: h6,
-    div: div,
-    span: span,
-    p: p,
-    li: li,
-    ul: ul,
-    a: a,
-    svg: svg,
-    path: path,
-    img: img
+    link: link,
+    html: tag('html'),
+    head: tag('head'),
+    title: tag('title'),
+    style: tag('style'),
+    body: tag('body'),
+    h1: tag('h1'),
+    h2: tag('h2'),
+    h3: tag('h3'),
+    h4: tag('h4'),
+    h5: tag('h5'),
+    h6: tag('h6'),
+    div: tag('div'),
+    span: tag('span'),
+    p: tag('p'),
+    ul: tag('ul'),
+    li: tag('li'),
+    a: tag('a'),
+    svg: tag('svg'),
+    path: tag('path'),
+    img: tag('img')
 };
